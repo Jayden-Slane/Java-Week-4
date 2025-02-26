@@ -9,14 +9,21 @@ public static void main (String[] args){
     int ones;
     int tens;
     int hundreds;
-    number = 100;
+    int thousand;
+
+    number = 1289;
     ones = number % 10;
     tens = (number / 10) % 10 ;
     hundreds = (number /100) % 10;
+    thousand = (number / 1000) % 10;
 
-    System.out.println(ones);
-    System.out.println(tens);
-    System.out.println(hundreds);
+    System.out.println("The thousand digit: " + thousand);
+    System.out.println("The hundreds digit: " + hundreds);
+    System.out.println("The tens digit: " + tens);
+    System.out.println("The ones digit: " + ones);
+    
+    
+  
 
 
 
