@@ -1,6 +1,7 @@
 /* 2/25/25, Jayden Slane seperate digets into parts */
 
-public class didgets {
+import java.util.*;
+public class digits {
 
 public static void main (String[] args){
 
@@ -10,8 +11,11 @@ public static void main (String[] args){
     int tens;
     int hundreds;
     int thousand;
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter a 4 digit number ");
 
-    number = 1289;
+    number = input.nextInt();
+    // number = 1289;
     ones = number % 10;
     tens = (number / 10) % 10 ;
     hundreds = (number /100) % 10;
@@ -21,9 +25,6 @@ public static void main (String[] args){
     System.out.println("The hundreds digit: " + hundreds);
     System.out.println("The tens digit: " + tens);
     System.out.println("The ones digit: " + ones);
-    
-    
-  
 
 
 
