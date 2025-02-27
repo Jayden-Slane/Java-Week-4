@@ -7,22 +7,29 @@ public class gradeaverage {
     public static void main (String[]args){
 
 
-
-    int grade1;
-    int grade2;
-    int grade3;
-    int grade4;
-    int grade5;
+    double average;
+    double grade1;
+    double grade2;
+    double grade3;
+    double grade4;
+    double grade5;
     Scanner input = new Scanner(System.in);
-    System.out.print("Enter a grade: ");
 
+
+    System.out.print("Enter a grade: "); 
     grade1 = input.nextInt();
+    System.out.print("Enter a grade: "); 
     grade2 = input.nextInt();
+    System.out.print("Enter a grade: "); 
     grade3 = input.nextInt();
+    System.out.print("Enter a grade: "); 
     grade4 = input.nextInt();
+    System.out.print("Enter a grade: "); 
     grade5 = input.nextInt();
 
+    average = (grade1 + grade2 +grade3 + grade4 + grade5) /5;
 
+    System.out.println("Your average is: " + average);
 
     }
     
