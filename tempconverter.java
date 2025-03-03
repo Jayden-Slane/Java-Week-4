@@ -12,7 +12,7 @@ public class tempconverter {
     System.out.print("Enter fahrenhiet: "); 
     fahrenhiet = input.nextInt();
 
-    celcius = 5/9 * (fahrenhiet - 32);
+    celcius = (5.0/9.0) * (fahrenhiet - 32.0);
 
     System.out.println("Celcius is: " + celcius);
 
