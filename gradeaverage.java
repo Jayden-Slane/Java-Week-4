@@ -6,7 +6,7 @@ public class gradeaverage {
 
     public static void main (String[]args){
 
-
+    
     double average;
     double grade1;
     double grade2;

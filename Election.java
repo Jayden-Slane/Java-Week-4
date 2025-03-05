@@ -1,4 +1,5 @@
 import java.util.*;
+import java.text.NumberFormat;
 public class Election {
 
 
@@ -7,6 +8,7 @@ public class Election {
 
     Scanner input = new Scanner(System.in);
 
+    NumberFormat percent= NumberFormat.getPercentInstance();
     double NY;
     double NJ;
     double CN;
@@ -37,13 +39,14 @@ public class Election {
     Awbrey = NYA + NJA + CNA;
     Martinez = NY + NJ + CN;
     totalVotes = Awbrey + Martinez;
-    averageA = (Awbrey/totalVotes) * 100;
-    averageM = (Martinez/totalVotes) * 100;
+    averageA = (Awbrey/totalVotes) ;
+    averageM = (Martinez/totalVotes) ;
 
 
 
-    System.out.println("Candidate\tVotes\tPercentage\nAwbrey\t\t" +Awbrey + "\t" + averageA);
-    System.out.println("Martinez\t" + Martinez + "\t" + averageM);
+    System.out.println("Candidate\tVotes\tPercentage\nAwbrey\t\t" +Awbrey + "\t" + percent.format(averageA));
+    System.out.println("Martinez\t" + Martinez + "\t" + percent.format(averageM));
+    System.out.println("Total votes: " + totalVotes);
 
 
 
