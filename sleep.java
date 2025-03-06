@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.*;
 public class sleep {
 
@@ -13,23 +14,33 @@ public class sleep {
         int day;
         int timealive;
         int hourslept;
+        int monthalive;
+        int dayalive;
+        int yearalive;
     
+        NumberFormat number = NumberFormat.getIntegerInstance();
 
-        System.out.print("Enter your birthyear: "); 
+        System.out.println("Enter your birthdate:");
+        System.out.print("Year: "); 
         birthyear = input.nextInt();
-        System.out.print("Enter your birth month: "); 
+        System.out.print("Month: "); 
         birthmonth = input.nextInt();
-        System.out.print("Enter your birth day: "); 
+        System.out.print("Day: "); 
         birthday = input.nextInt();
-        System.out.print("Enter current year: "); 
+        System.out.println("Enter todays date:");
+        System.out.print("Year: "); 
         todayear = input.nextInt();
-        System.out.print("Enter current month: "); 
+        System.out.print("Month: "); 
         month = input.nextInt();
-        System.out.print("Enter current day: "); 
+        System.out.print("Day: "); 
         day = input.nextInt();
 
-        timealive = (todayear - birthyear) * 365;
-        hourslept = (day - birthday) * 8;
+        
+        timealive = ((day - birthday) + ((month - birthmonth) * 30) + ((todayear - birthyear) * 365));
+        hourslept = timealive * 8;
+
+        System.out.println("You have been alive for: " + (number.format(timealive)) + " days");
+        System.out.println("You have slept for: " + (number.format(hourslept)) + " hours");
 
 
     }
